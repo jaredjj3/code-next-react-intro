@@ -22,10 +22,6 @@ const Foo = () => {
 Components are composable.
 
 ```js
-const Bar = () => {
-  return <div>Bar stuff</div>;
-};
-
 const Foo = () => {
   return (
     <div>
@@ -34,21 +30,28 @@ const Foo = () => {
     </div>
   );
 };
+
+const Bar = () => {
+  return <div>Bar stuff</div>;
+};
 ```
 
 Components "talk" to each other using props.
 
-```js
+```jsx
+const Foo = (props) => {
+  return <h1><Upcase msg={'hello'} /><h1>;
+};
+
 const Upcase = (props) => {
   const msg = props.msg;
   return <div>{msg}</div>;
 };
-
-const Foo = (props) => {
-  return <h1><Upcase msg={'hello'} /><h1>;
-};
 ```
 
+### YOUR TURN
+
+Open `src/Components.js` and practice.
 
 ## State
 
