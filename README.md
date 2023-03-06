@@ -55,4 +55,6 @@ Open `src/Components.js` and practice.
 
 ## State
 
+State is 
+
 ## Events

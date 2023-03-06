@@ -25,26 +25,23 @@ const Components1 = (props) => {
 };
 
 // What does this component show?
-// Components2: HELLO WORLD
+// Components2: HELLO JARED
 const Components2 = () => {
   return (
     <div>
-      Components2: <Upcase msg={'hello world'} />
+      Components2: <WelcomeLoudly name={'Jared'} />
     </div>
   );
 };
-const Upcase = (props) => {
-  const msg = props.msg ?? '';
-  return <span>{msg.toUpperCase()}</span>;
+const WelcomeLoudly = (props) => {
+  const name = props.name ?? '';
+  return <span>WELCOME {name.toUpperCase()}</span>;
 };
 
 // TODO: Make some more basic components, and render them next to "Components3".
 const Components3 = () => {
   return <div>Components3: <Foo /></div>;
 };
-
 const Foo = () => <Bar />;
-
 const Bar = () => <Baz />;
-
 const Baz = () => <span>Baz</span>;
