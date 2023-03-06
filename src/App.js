@@ -1,4 +1,7 @@
 import React from "react";
+import { State } from './State';
+import { Components } from './Components'; 
+import { Events } from './Events'; 
 import "./style.css";
 
 export default function App() {
@@ -8,9 +11,14 @@ export default function App() {
       
       <hr />
 
+      <h2>Components</h2>
+      <Components />
+
       <h2>State</h2>
+      <State />
 
       <h2>Events</h2>
+      <Events />
     </>
   );
 }
