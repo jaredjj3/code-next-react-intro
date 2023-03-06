@@ -31,7 +31,6 @@ const Components2 = () => {
     </div>
   );
 };
-
 const Upcase = (props) => {
   const msg = props.msg ?? '';
   return <span>{msg.toUpperCase()}</span>;
