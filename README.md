@@ -5,9 +5,9 @@
 In this lesson, engineers will
 
 - understand the problems that React solves
-- create basic React components
+- know how to create basic React components
 - learn how to track state using React hooks
-- create click event handlers
+- understand where to find React events
 
 ## Components
 
@@ -73,7 +73,7 @@ const Foo = () => {
 };
 ```
 
->NOTE: See this [article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) for an explanation of the destructuring assignment syntax.
+> NOTE: See this [article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) for an explanation of the destructuring assignment syntax.
 
 You cannot declare state without using `useState`.
 
@@ -117,3 +117,23 @@ const Foo = () => {
 Open `src/State.js` and practice.
 
 ## Events
+
+Events are how you can react to user interactions.
+
+You've seen the click handler, but did you know there's an event passed to the callback?
+
+```jsx
+const Foo = () => {
+  const onClick = (event) => {
+    console.log(event);
+  };
+
+  return <button onClick={onClick}>click</button>;
+};
+```
+
+Visit and bookmark https://reactjs.org/docs/events.html. Can you find what properties/methods are available on the click event? What can you do with that? What other events can you hook into?
+
+### YOUR TURN
+
+Open `src/Events.js` and practice.
