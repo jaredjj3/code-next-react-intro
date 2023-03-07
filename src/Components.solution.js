@@ -25,7 +25,7 @@ const Components1 = (props) => {
 };
 
 // What does this component show?
-// Components2: HELLO JARED
+// Components2: WELCOME JARED
 const Components2 = () => {
   return (
     <div>
