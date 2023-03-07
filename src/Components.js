@@ -17,13 +17,13 @@ export const Components = () => {
   );
 };
 
-// What does this component do?
+// TODO: What does this component do?
 const Components1 = (props) => {
   const x = props.x ?? 0;
   return <div>Components1: {x * 2}</div>;
 };
 
-// What does this component show?
+// TODO: What does this component show?
 const Components2 = () => {
   return (
     <div>

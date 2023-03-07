@@ -12,7 +12,7 @@ export const State = () => {
   );
 };
 
-// What happens when the button is clicked?
+// TODO: What happens when the button is clicked?
 const State1 = () => {
   const [foos, setFoos] = useState([]);
 
@@ -32,9 +32,9 @@ const State1 = () => {
   );
 };
 
-// What do you think will happen when the increment button is clicked?
+// TODO: What do you think will happen when the increment button is clicked?
 // Why do you think this happens?
-// TODO: Fix this component.
+// Fix this component.
 const State2 = () => {
   let count = 0;
 
