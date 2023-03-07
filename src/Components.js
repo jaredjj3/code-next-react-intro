@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Components = () => {
   return (
-    <div>
+    <>
       <Components1 x={4} />
       <Components1 />
 
@@ -13,7 +13,7 @@ export const Components = () => {
       <br />
 
       <Components3 />
-    </div>
+    </>
   );
 };
 
@@ -36,7 +36,7 @@ const WelcomeLoudly = (props) => {
   return <span>WELCOME {name.toUpperCase()}</span>;
 };
 
-// TODO: Make some more basic components, and render them next to "Components3".
+// TODO: Make some more basic components, and render them after "Components3".
 const Components3 = () => {
   return <div>Components3:</div>;
 };

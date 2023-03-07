@@ -13,7 +13,7 @@ In this lesson, engineers will
 
 Components are the building blocks in React. They are declared using functions that return JSX templates.
 
-```js
+```jsx
 const Foo = () => {
   return <div>Foo</div>;
 };
@@ -21,7 +21,7 @@ const Foo = () => {
 
 Components are composable.
 
-```js
+```jsx
 const Foo = () => {
   return (
     <div>
@@ -55,6 +55,65 @@ Open `src/Components.js` and practice.
 
 ## State
 
-State is 
+**KEY TAKEAWAY:** React makes it easy to synchronize state and what the user sees.
+
+State is internal component data. It can be passed to other components via props. React has a hook `useState`, which allows you to get and set state.
+
+```jsx
+// GOOD
+const Foo = () => {
+  const [count, setCount] = useState(0); // 0 is the initial state
+
+  return (
+    <>
+      <div>{count}</div>
+      <button onClick={() => setCount(count + 1)}>increment</button>
+    </>
+  );
+};
+```
+
+>NOTE: See this [article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) for an explanation of the destructuring assignment syntax.
+
+You cannot declare state without using `useState`.
+
+```jsx
+// BAD
+const Foo = () => {
+  // React has no idea about this and cannot "react" to changes.
+  let count = 0;
+
+  return (
+    <>
+      <div>{count}</div>
+      <button onClick={() => count++}>increment</button>
+    </>
+  );
+};
+```
+
+The `setState` function can take the new value, or another _function_ that takes the current value as an argument and returns the new value.
+
+```jsx
+const Foo = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    // NOTE: The count variable is shadowed, but that's usually ok in this context.
+    setState((count) => count + 1);
+  };
+
+  return (
+    <>
+      <div>{count}</div>
+      <button onClick={increment}>increment</button>
+    </>
+  );
+};
+```
+
+### YOUR TURN
+
+Open `src/State.js` and practice.
 
 ## Events

@@ -38,7 +38,7 @@ const WelcomeLoudly = (props) => {
   return <span>WELCOME {name.toUpperCase()}</span>;
 };
 
-// TODO: Make some more basic components, and render them next to "Components3".
+// TODO: Make some more basic components, and render them after "Components3".
 const Components3 = () => {
   return <div>Components3: <Foo /></div>;
 };
