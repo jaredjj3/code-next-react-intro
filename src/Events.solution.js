@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 
 // TODO: Without changing anything, what does this component do?
+// It renders the current X and Y position inside the canvas.
 export const Events = () => {
   // useRef is a handy way of getting a reference to something in the DOM.
   // See https://reactjs.org/docs/hooks-reference.html#useref
@@ -14,8 +15,16 @@ export const Events = () => {
     setX(e.clientX - e.target.offsetLeft);
     setY(e.clientY - e.target.offsetTop);
   };
+  const onMouseDown = () => {
+    setIsMouseDown(true);
+  };
+  const onMouseUp = () => {
+    setIsMouseDown(false);
+  };
 
   // TODO: What do you think will happen if you change isMouseDown to true?
+  // It will always draw a line inside the canvas component when moving a mouse in it.
+  //
   // After you observe what happens, change it back. Update the component
   // so that isMouseDown is true when the mouse is down and false when the
   // mouse is up.
@@ -28,7 +37,12 @@ export const Events = () => {
 
       <br />
 
-      <canvas ref={canvas} onMouseMove={onMouseMove} />
+      <canvas
+        ref={canvas}
+        onMouseMove={onMouseMove}
+        onMouseDown={onMouseDown}
+        onMouseUp={onMouseUp}
+      />
     </>
   );
 };
@@ -36,6 +50,7 @@ export const Events = () => {
 // NOTE: You don't need to read anything below this line, but feel free to.
 
 // BONUS: What does this code do?
+// It draws a line to x, y on the <canvas> when active is true.
 const useLineDrawnTo = (canvas, x, y, active) => {
   const ctx = useCtx(canvas, x, y, active);
 
@@ -63,6 +78,7 @@ const useLineDrawnTo = (canvas, x, y, active) => {
 };
 
 // BONUS: What does this code do?
+// It creates and styles a 2d canvas context.
 const useCtx = (canvas) => {
   const [ctx, setCtx] = useState(null);
 
