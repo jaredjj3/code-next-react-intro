@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
 
 // TODO: Without changing anything, what does this component do?
 // It renders the current X and Y position inside the canvas.
@@ -65,7 +65,7 @@ const useLineDrawnTo = (canvas, x, y, active) => {
     }
   }, [active, ctx]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!isDrawing) {
       return;
     }

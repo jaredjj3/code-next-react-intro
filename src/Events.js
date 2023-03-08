@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useLayoutEffect } from 'react';
 
 // TODO: Without changing anything, what does this component do?
 export const Events = () => {
@@ -50,7 +50,7 @@ const useLineDrawnTo = (canvas, x, y, active) => {
     }
   }, [active, ctx]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!isDrawing) {
       return;
     }
