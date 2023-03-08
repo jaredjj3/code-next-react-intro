@@ -28,7 +28,7 @@ const State1 = () => {
 
       <br />
 
-      <button onClick={addFoo}>Add foo</button>
+      <button class="btn btn-primary" onClick={addFoo}>Add foo</button>
     </div>
   );
 };
@@ -53,7 +53,7 @@ const State2 = () => {
 
       <br />
 
-      <button onClick={increment}>increment</button>
+      <button class="btn btn-primary" onClick={increment}>increment</button>
     </div>
   );
 };

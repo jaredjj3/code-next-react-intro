@@ -6,7 +6,7 @@ import "./style.css";
 
 export default function App() {
   return (
-    <>
+    <div class="container">
       <h1>code-next-react-intro</h1>
       
       <hr />
@@ -14,11 +14,15 @@ export default function App() {
       <h2>Components</h2>
       <Components />
 
+      <br />
+
       <h2>State</h2>
       <State />
 
+      <br />
+
       <h2>Events</h2>
       <Events />
-    </>
+    </div>
   );
 }
