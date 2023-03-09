@@ -25,10 +25,10 @@ const State1 = () => {
   return (
     <div>
       State1: {foos.join(', ')}
-
       <br />
-
-      <button class="btn btn-primary" onClick={addFoo}>Add foo</button>
+      <button className="btn btn-primary" onClick={addFoo}>
+        Add foo
+      </button>
     </div>
   );
 };
@@ -50,10 +50,10 @@ const State2 = () => {
   return (
     <div>
       State2: {count}
-
       <br />
-
-      <button class="btn btn-primary" onClick={increment}>increment</button>
+      <button className="btn btn-primary" onClick={increment}>
+        increment
+      </button>
     </div>
   );
 };
