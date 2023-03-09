@@ -2,6 +2,8 @@
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/code-next-react-intro)
 
+A lesson for the [Code Next](https://codenext.withgoogle.com/) React club.
+
 In this lesson, engineers will
 
 - understand the problems that React solves
