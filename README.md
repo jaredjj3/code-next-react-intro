@@ -134,7 +134,7 @@ const Foo = () => {
 };
 ```
 
-Visit and bookmark https://reactjs.org/docs/events.html. Can you find what properties/methods are available on the click event? What can you do with that? What other events can you hook into?
+Visit and bookmark (legacy: https://reactjs.org/docs/events.html, new: https://react.dev/reference/react-dom/components/common). Can you find what properties/methods are available on the click event? What can you do with that? What other events can you hook into?
 
 ### YOUR TURN
 
